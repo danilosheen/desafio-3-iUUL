@@ -15,7 +15,7 @@ npm install
  ```
 - 2º Execute o comando abaixo para iniciar alguma das 5 aplicações app1 ~ app5 exemplo:
  ```bash
-node ./js/app1
+node ./js/app1.js
  ```
 
 ## Link do Trello utilizado como organização de atividades
