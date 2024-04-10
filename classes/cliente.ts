@@ -6,10 +6,10 @@ import { Endereco } from "./endereco";
 export class Cliente extends Pessoa implements IUsuario {
   private _vip: boolean;
   private _enderecos: Endereco[] = [];
-  private _conta: Conta[] = [];
+  private _contas: Conta[] = [];
 
   constructor(
-    cpf: number,
+    cpf: string,
     nome: string,
     telefone: string,
     vip: boolean,
@@ -17,7 +17,7 @@ export class Cliente extends Pessoa implements IUsuario {
   ) {
     super(cpf, nome, telefone);
     this._vip = vip;
-    this._conta.push(conta);
+    this._contas.push(conta);
   }
 
   //métodos
@@ -30,7 +30,7 @@ export class Cliente extends Pessoa implements IUsuario {
   }
 
   public adicionarConta(conta: Conta){
-    this._conta.push(conta)
+    this._contas.push(conta)
   }
 
   //getters and setters
@@ -55,6 +55,6 @@ export class Cliente extends Pessoa implements IUsuario {
 
   //conta[
   public get conta(): Conta[] {
-    return this._conta;
+    return this._contas;
   }
 }

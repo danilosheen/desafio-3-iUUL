@@ -3,7 +3,7 @@ import { ContaCorrente } from "./classes/contaCorrente";
 
 //Crie um cliente que possua uma ContaCorrente
 const cc1 = new ContaCorrente(1, 0);
-const cliente1 = new Cliente(999999, "Danilo", "88888888", true, cc1);
+const cliente1 = new Cliente("999999", "Danilo", "88888888", true, cc1);
 
 // Efetue um depósito de 300 nessa ContaCorrente
 cc1.depositar(300, new Date());
@@ -13,7 +13,7 @@ cc1.limite = 100;
 
 // Crie um cliente que possua uma ContaCorrente
 const cc2 = new ContaCorrente(2, 0);
-const cliente2 = new Cliente(999999, "Maria", "88888888", true, cc2);
+const cliente2 = new Cliente("999999", "Maria", "88888888", true, cc2);
 
 // Efetue um depósito de 100 reais nesta ContaCorrente
 cc2.depositar(100, new Date());

@@ -6,9 +6,9 @@ class Cliente extends pessoa_1.Pessoa {
     constructor(cpf, nome, telefone, vip, conta) {
         super(cpf, nome, telefone);
         this._enderecos = [];
-        this._conta = [];
+        this._contas = [];
         this._vip = vip;
-        this._conta.push(conta);
+        this._contas.push(conta);
     }
     //métodos
     adicionarEndereco(endereco) {
@@ -18,7 +18,7 @@ class Cliente extends pessoa_1.Pessoa {
         return true;
     }
     adicionarConta(conta) {
-        this._conta.push(conta);
+        this._contas.push(conta);
     }
     //getters and setters
     //endereco
@@ -37,7 +37,7 @@ class Cliente extends pessoa_1.Pessoa {
     }
     //conta[
     get conta() {
-        return this._conta;
+        return this._contas;
     }
 }
 exports.Cliente = Cliente;

@@ -9,5 +9,8 @@ class Debito {
     get valor() {
         return this._valor;
     }
+    get data() {
+        return this._data;
+    }
 }
 exports.Debito = Debito;

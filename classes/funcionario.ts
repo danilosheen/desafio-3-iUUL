@@ -7,7 +7,7 @@ export class Funcionario extends Pessoa implements IUsuario {
   private _cargo: Cargo;
 
   constructor(
-    cpf: number,
+    cpf: string,
     nome: string,
     telefone: string,
     salario: number,

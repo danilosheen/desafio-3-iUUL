@@ -28,7 +28,7 @@ const end3 = new Endereco(
 );
 
 const cliente1 = new Cliente(
-  99999999999,
+  "99999999999",
   "Rafael",
   "8888-8888",
   true,

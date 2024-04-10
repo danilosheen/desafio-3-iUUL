@@ -1,21 +1,21 @@
 export abstract class Pessoa{
 
-  private _cpf: number;
+  private _cpf: string;
   private _nome: string;
   private _telefone: string;
 
-  constructor(cpf: number, nome: string, telefone: string){
+  constructor(cpf: string, nome: string, telefone: string){
     this._cpf = cpf;
     this._nome = nome
     this._telefone = telefone
   }
 
   //cpf
-  public get cpf(): number{
+  public get cpf(): string{
     return this._cpf;
   }
 
-  public set cpf(value: number){
+  public set cpf(value: string){
     this._cpf = value;
   }
 

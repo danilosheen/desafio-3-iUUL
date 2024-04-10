@@ -7,7 +7,11 @@ export class Credito {
     this._data = data;
   }
 
-  public get valor(){
-    return this._valor
+  public get valor() {
+    return this._valor;
+  }
+
+  public get data() {
+    return this._data;
   }
 }

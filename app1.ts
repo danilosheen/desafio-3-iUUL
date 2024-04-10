@@ -1,14 +1,14 @@
 import { Funcionario } from "./classes/funcionario";
 
 const func1 = new Funcionario(
-  99999999970,
+  "99999999970",
   "Danilo",
   "8888-8888",
   5000,
   "gerente"
 );
 const func2 = new Funcionario(
-  99999999990,
+  "99999999990",
   "Felipe",
   "8888-8888",
   2000,
