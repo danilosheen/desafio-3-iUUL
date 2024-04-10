@@ -24,6 +24,6 @@ export class ContaPoupanca extends Conta {
 
   public verSaldo(): string {
     this.atualizarSaldoSaque();
-    return `Conta PP ${super.numero}: Seu limite de saque é de: ${this._saldo}`;
+    return `Conta PP ${super.nConta}: Seu saldo é de ${this._saldo}`;
   }
 }

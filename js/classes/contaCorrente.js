@@ -18,7 +18,6 @@ class ContaCorrente extends conta_1.Conta {
             super.sacar(valor, new Date());
             contaDestino.depositar(valor, new Date());
             console.log(`Transferência realizada com sucesso!`);
-            this.atualizarLimiteSaque();
         }
         else {
             console.log(`Saldo insuficiente para transferência!`);
@@ -29,7 +28,6 @@ class ContaCorrente extends conta_1.Conta {
         if (this._limiteSaque >= valor) {
             super.sacar(valor, data);
             console.log(`Saque realizado com sucesso!`);
-            this.atualizarLimiteSaque();
         }
         else {
             console.log(`Limite de saque insuficiente!`);
@@ -37,7 +35,7 @@ class ContaCorrente extends conta_1.Conta {
     }
     verLimite() {
         this.atualizarLimiteSaque();
-        return `Conta CC ${super.numero}: Seu limite de saque é de: ${this._limiteSaque}`;
+        return `Conta CC ${super.nConta}: Seu limite de saque é de ${this._limiteSaque}`;
     }
     //getters and setters
     //limite

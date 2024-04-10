@@ -10,33 +10,6 @@ export abstract class Conta {
     this._nConta = nConta;
   }
 
-  //numero
-  public get numero(): number {
-    return this._nConta;
-  }
-
-  public set numero(nConta: number) {
-    this._nConta = nConta;
-  }
-
-  //creditos
-  public get creditos(): Credito[] {
-    return this._creditos;
-  }
-
-  public set creditos(value: Credito) {
-    this._creditos.push(value);
-  }
-
-  //debitos
-  public get debitos(): Debito[] {
-    return this._debitos;
-  }
-
-  public set debitos(value: Debito) {
-    this._debitos.push(value);
-  }
-
   //metodos
   public depositar(valor: number, data: Date) {
     this._creditos.push(new Credito(valor, data));
@@ -57,5 +30,25 @@ export abstract class Conta {
     }
 
     return creditos - debitos;
+  }
+
+  //getters and setters
+  //numero da conta
+  public get nConta(): number {
+    return this._nConta;
+  }
+
+  public set nConta(nConta: number) {
+    this._nConta = nConta;
+  }
+
+  //creditos
+  public get creditos(): Credito[] {
+    return this._creditos;
+  }
+
+  //debitos
+  public get debitos(): Debito[] {
+    return this._debitos;
   }
 }

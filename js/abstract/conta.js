@@ -9,27 +9,6 @@ class Conta {
         this._debitos = [];
         this._nConta = nConta;
     }
-    //numero
-    get numero() {
-        return this._nConta;
-    }
-    set numero(nConta) {
-        this._nConta = nConta;
-    }
-    //creditos
-    get creditos() {
-        return this._creditos;
-    }
-    set creditos(value) {
-        this._creditos.push(value);
-    }
-    //debitos
-    get debitos() {
-        return this._debitos;
-    }
-    set debitos(value) {
-        this._debitos.push(value);
-    }
     //metodos
     depositar(valor, data) {
         this._creditos.push(new credito_1.Credito(valor, data));
@@ -47,6 +26,22 @@ class Conta {
             debitos += this._debitos[i].valor;
         }
         return creditos - debitos;
+    }
+    //getters and setters
+    //numero da conta
+    get nConta() {
+        return this._nConta;
+    }
+    set nConta(nConta) {
+        this._nConta = nConta;
+    }
+    //creditos
+    get creditos() {
+        return this._creditos;
+    }
+    //debitos
+    get debitos() {
+        return this._debitos;
     }
 }
 exports.Conta = Conta;

@@ -7,20 +7,19 @@ export class ContaCorrente extends Conta {
   constructor(nConta: number, limite: number) {
     super(nConta);
     this._limite = limite;
-    this._limiteSaque += this._limite
+    this._limiteSaque += this._limite;
   }
 
-  public atualizarLimiteSaque() {
+  protected atualizarLimiteSaque() {
     this._limiteSaque = super.calcularSaldo() + this._limite;
   }
 
-  public transferir(contaDestino: Conta, valor: number) {
+  public transferir(contaDestino: Conta, valor: number): void {
     this.atualizarLimiteSaque();
     if (this._limiteSaque >= valor) {
       super.sacar(valor, new Date());
       contaDestino.depositar(valor, new Date());
       console.log(`Transferência realizada com sucesso!`);
-      this.atualizarLimiteSaque();
     } else {
       console.log(`Saldo insuficiente para transferência!`);
     }
@@ -31,7 +30,6 @@ export class ContaCorrente extends Conta {
     if (this._limiteSaque >= valor) {
       super.sacar(valor, data);
       console.log(`Saque realizado com sucesso!`);
-      this.atualizarLimiteSaque();
     } else {
       console.log(`Limite de saque insuficiente!`);
     }
@@ -39,7 +37,7 @@ export class ContaCorrente extends Conta {
 
   public verLimite(): string {
     this.atualizarLimiteSaque();
-    return `Conta CC ${super.numero}: Seu limite de saque é de: ${
+    return `Conta CC ${super.nConta}: Seu limite de saque é de ${
       this._limiteSaque
     }`;
   }
