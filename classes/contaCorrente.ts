@@ -2,13 +2,12 @@ import { Conta } from "../abstract/conta";
 
 export class ContaCorrente extends Conta {
   private _limite: number;
-  private _saldo: number = 0;
   private _limiteSaque: number = 0;
 
   constructor(nConta: number, limite: number) {
     super(nConta);
     this._limite = limite;
-    this._limiteSaque = this._saldo + this._limite
+    this._limiteSaque += this._limite
   }
 
   public atualizarLimiteSaque() {

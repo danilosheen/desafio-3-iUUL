@@ -5,10 +5,9 @@ const conta_1 = require("../abstract/conta");
 class ContaCorrente extends conta_1.Conta {
     constructor(nConta, limite) {
         super(nConta);
-        this._saldo = 0;
         this._limiteSaque = 0;
         this._limite = limite;
-        this._limiteSaque = this._saldo + this._limite;
+        this._limiteSaque += this._limite;
     }
     atualizarLimiteSaque() {
         this._limiteSaque = super.calcularSaldo() + this._limite;
