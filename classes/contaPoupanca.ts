@@ -3,8 +3,8 @@ import { Conta } from "../abstract/conta";
 export class ContaPoupanca extends Conta {
   private _saldo: number = 0;
 
-  constructor(nConta: number) {
-    super(nConta);
+  constructor(nConta: number, idCliente: string) {
+    super(nConta, idCliente);
   }
 
   public atualizarSaldoSaque() {

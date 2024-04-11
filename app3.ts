@@ -2,8 +2,8 @@ import { Cliente } from "./classes/cliente";
 import { ContaCorrente } from "./classes/contaCorrente";
 
 //Crie um cliente que possua uma ContaCorrente
-const cc1 = new ContaCorrente(1, 0);
-const cliente1 = new Cliente("999999", "Danilo", "88888888", true, cc1);
+const cliente1 = new Cliente("999999", "Danilo", "88888888", true);
+const cc1 = new ContaCorrente(1, 0, cliente1.idCliente);
 
 //Efetue três depósitos de 100 nessa ContaCorrente
 cc1.depositar(100, new Date());

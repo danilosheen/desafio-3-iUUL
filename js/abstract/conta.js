@@ -4,10 +4,11 @@ exports.Conta = void 0;
 const credito_1 = require("../classes/credito");
 const debito_1 = require("../classes/debito");
 class Conta {
-    constructor(nConta) {
+    constructor(nConta, idCliente) {
         this._creditos = [];
         this._debitos = [];
         this._nConta = nConta;
+        this._idCliente = idCliente;
     }
     //metodos
     depositar(valor, data) {
@@ -42,6 +43,13 @@ class Conta {
     //debitos
     get debitos() {
         return this._debitos;
+    }
+    //idCliente
+    get idCliente() {
+        return this._idCliente;
+    }
+    set idCliente(idCliente) {
+        this._idCliente = idCliente;
     }
 }
 exports.Conta = Conta;

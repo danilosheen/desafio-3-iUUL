@@ -1,6 +1,14 @@
 import { Cliente } from "./classes/cliente";
 import { ContaCorrente } from "./classes/contaCorrente";
+import { ContaPoupanca } from "./classes/contaPoupanca";
 import { Endereco } from "./classes/endereco";
+
+const cliente1 = new Cliente("99999999999", "Danilo", "8888-8888", true);
+
+const cc1 = new ContaCorrente(1, 0, cliente1.idCliente);
+
+cliente1.adicionarConta(cc1);
+
 
 const end1 = new Endereco(
   "63000000",
@@ -8,7 +16,8 @@ const end1 = new Endereco(
   "368A",
   "Casa",
   "Barbalha",
-  "CE"
+  "CE",
+  cliente1.idCliente
 );
 const end2 = new Endereco(
   "63000000",
@@ -16,7 +25,8 @@ const end2 = new Endereco(
   "368A",
   "Casa",
   "Juazeiro",
-  "CE"
+  "CE",
+  cliente1.idCliente
 );
 const end3 = new Endereco(
   "63000000",
@@ -24,18 +34,11 @@ const end3 = new Endereco(
   "368A",
   "Casa",
   "Juazeiro",
-  "CE"
-);
-
-const cliente1 = new Cliente(
-  "99999999999",
-  "Rafael",
-  "8888-8888",
-  true,
-  new ContaCorrente(1, 0)
+  "CE",
+  cliente1.idCliente
 );
 
 cliente1.adicionarEndereco(end1);
 cliente1.adicionarEndereco(end2);
 cliente1.adicionarEndereco(end3);
-console.log(cliente1.enderecos);
+console.log(cliente1);

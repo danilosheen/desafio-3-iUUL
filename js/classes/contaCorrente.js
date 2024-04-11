@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ContaCorrente = void 0;
 const conta_1 = require("../abstract/conta");
 class ContaCorrente extends conta_1.Conta {
-    constructor(nConta, limite) {
-        super(nConta);
+    constructor(nConta, limite, idCliente) {
+        super(nConta, idCliente);
         this._limiteSaque = 0;
         this._limite = limite;
         this._limiteSaque += this._limite;

@@ -2,12 +2,14 @@ import { Credito } from "../classes/credito";
 import { Debito } from "../classes/debito";
 
 export abstract class Conta {
+  private _idCliente: string;
   private _nConta: number;
   private _creditos: Credito[] = [];
   private _debitos: Debito[] = [];
 
-  constructor(nConta: number) {
+  constructor(nConta: number, idCliente: string) {
     this._nConta = nConta;
+    this._idCliente = idCliente;
   }
 
   //metodos
@@ -50,5 +52,14 @@ export abstract class Conta {
   //debitos
   public get debitos(): Debito[] {
     return this._debitos;
+  }
+
+  //idCliente
+  public get idCliente(): string {
+    return this._idCliente;
+  }
+
+  public set idCliente(idCliente: string) {
+    this._idCliente = idCliente;
   }
 }
