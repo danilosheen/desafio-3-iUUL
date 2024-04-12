@@ -6,7 +6,12 @@ node_modules/
 jspm_packages/
 
 # Directories
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
