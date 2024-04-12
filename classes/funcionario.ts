@@ -11,11 +11,11 @@ export class Funcionario extends Pessoa implements IUsuario {
     nome: string,
     telefone: string,
     salario: number,
-    cargo: string
+    cargo: Cargo
   ) {
     super(cpf, nome, telefone);
     this._salario = salario;
-    this._cargo = new Cargo(cargo);
+    this._cargo = cargo;
   }
 
   //método

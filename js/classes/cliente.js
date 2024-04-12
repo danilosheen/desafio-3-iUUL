@@ -15,7 +15,7 @@ class Cliente extends pessoa_1.Pessoa {
     adicionarEndereco(endereco) {
         if (endereco.idCliente != this._idCliente) {
             console.error(`Você não pode associar esse endereço a ${this.nome}.`);
-            console.error(`O endereço ${endereco.logradouro} pertence ao cliente ${endereco.idCliente}`);
+            console.error(`O endereço ${endereco.logradouro} pertence ao cliente ${endereco.nomeCliente}`);
         }
         else {
             this._enderecos.push(endereco);
@@ -27,7 +27,7 @@ class Cliente extends pessoa_1.Pessoa {
     adicionarConta(conta) {
         if (conta.idCliente != this._idCliente) {
             console.error(`Você não pode associar o cliente ${this.nome} a essa conta.`);
-            console.error(`A conta ${conta.nConta} pertence ao cliente ${conta.idCliente}`);
+            console.error(`A conta ${conta.nConta} pertence ao cliente ${conta.nomeCliente}.`);
         }
         else {
             this._contas.push(conta);
@@ -53,7 +53,7 @@ class Cliente extends pessoa_1.Pessoa {
         this._vip = value;
     }
     //conta[
-    get conta() {
+    get contas() {
         return this._contas;
     }
 }

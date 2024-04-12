@@ -1,18 +1,24 @@
+import { Cargo } from "./classes/cargo";
 import { Funcionario } from "./classes/funcionario";
+
+//Crie dois funcionários do banco, um gerente e um atendente.
+
+const cargoGerente = new Cargo("Gerente");
+const cargoAtendente = new Cargo("Atendente");
 
 const func1 = new Funcionario(
   "99999999970",
   "Danilo",
   "8888-8888",
   5000,
-  "gerente"
+  cargoGerente
 );
 const func2 = new Funcionario(
   "99999999990",
   "Felipe",
   "8888-8888",
   2000,
-  "atendente"
+  cargoAtendente
 );
 
 console.log(
@@ -23,6 +29,7 @@ console.log(
   func1.cargo,
   func1.autenticar()
 );
+console.log("----------------------------------");
 console.log(
   func2.cpf,
   func2.nome,
@@ -31,5 +38,11 @@ console.log(
   func2.cargo,
   func2.autenticar()
 );
+console.log("----------------------------------");
+console.log(cargoGerente);
+console.log("----------------------------------");
+console.log(cargoAtendente);
+console.log("----------------------------------");
 console.log(func1);
+console.log("----------------------------------");
 console.log(func2);

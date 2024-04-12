@@ -1,9 +1,13 @@
 import { Cliente } from "./classes/cliente";
 import { ContaCorrente } from "./classes/contaCorrente";
 
+//Loop conta recebe cliente e cliente recebe conta
+//Possível solução: passar o idCliente como parâmetro na instância da conta para associação
+
 //Crie um cliente que possua uma ContaCorrente
 const cliente1 = new Cliente("999999", "Danilo", "88888888", true);
-const cc1 = new ContaCorrente(1, 0, cliente1.idCliente);
+const cc1 = new ContaCorrente(1, 0, cliente1);
+cliente1.adicionarConta(cc1);
 
 // Efetue um depósito de 300 nessa ContaCorrente
 cc1.depositar(300, new Date());
@@ -13,7 +17,8 @@ cc1.limite = 100;
 
 // Crie um cliente que possua uma ContaCorrente
 const cliente2 = new Cliente("999999", "Maria", "88888888", true);
-const cc2 = new ContaCorrente(2, 0, cliente2.idCliente);
+const cc2 = new ContaCorrente(2, 0, cliente2);
+cliente2.adicionarConta(cc2);
 
 // Efetue um depósito de 100 reais nesta ContaCorrente
 cc2.depositar(100, new Date());

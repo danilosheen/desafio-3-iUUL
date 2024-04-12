@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ContaPoupanca = void 0;
 const conta_1 = require("../abstract/conta");
 class ContaPoupanca extends conta_1.Conta {
-    constructor(nConta, idCliente) {
-        super(nConta, idCliente);
+    constructor(nConta, cliente) {
+        super(nConta, cliente);
         this._saldo = 0;
     }
     atualizarSaldoSaque() {

@@ -1,11 +1,12 @@
 import { Conta } from "../abstract/conta";
+import { Cliente } from "./cliente";
 
 export class ContaCorrente extends Conta {
   private _limite: number;
   private _limiteSaque: number = 0;
 
-  constructor(nConta: number, limite: number, idCliente: string) {
-    super(nConta, idCliente);
+  constructor(nConta: number, limite: number, cliente: Cliente) {
+    super(nConta, cliente);
     this._limite = limite;
     this._limiteSaque += this._limite;
   }

@@ -7,7 +7,7 @@ export class Endereco {
   private _complemento: string;
   private _cidade: string;
   private _uf: string;
-  private _idCliente: string;
+  private _cliente: Cliente;
 
   constructor(
     cep: string,
@@ -16,7 +16,7 @@ export class Endereco {
     complemento: string,
     cidade: string,
     uf: string,
-    idCliente: string
+    cliente: Cliente
   ) {
     this._cep = cep;
     this._logradouro = logradouro;
@@ -24,7 +24,7 @@ export class Endereco {
     this._complemento = complemento;
     this._cidade = cidade;
     this._uf = uf;
-    this._idCliente = idCliente;
+    this._cliente = cliente;
   }
 
   //cep
@@ -81,7 +81,13 @@ export class Endereco {
     this._uf = value;
   }
 
+  //id
   public get idCliente(): string {
-    return this._idCliente;
+    return this._cliente.idCliente;
+  }
+
+  //nomeCliente
+  public get nomeCliente(): string {
+    return this._cliente.nome;
   }
 }
