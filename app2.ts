@@ -1,14 +1,7 @@
 import { Cliente } from "./classes/cliente";
-import { ContaCorrente } from "./classes/contaCorrente";
-import { ContaPoupanca } from "./classes/contaPoupanca";
 import { Endereco } from "./classes/endereco";
 
 const cliente1 = new Cliente("99999999999", "Danilo", "8888-8888", true);
-
-const cc1 = new ContaCorrente(1, 0, cliente1.idCliente);
-
-cliente1.adicionarConta(cc1);
-
 
 const end1 = new Endereco(
   "63000000",

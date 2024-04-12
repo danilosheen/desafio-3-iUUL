@@ -13,7 +13,13 @@ class Cliente extends pessoa_1.Pessoa {
     }
     //métodos
     adicionarEndereco(endereco) {
-        this._enderecos.push(endereco);
+        if (endereco.idCliente != this._idCliente) {
+            console.error(`Você não pode associar esse endereço a ${this.nome}.`);
+            console.error(`O endereço ${endereco.logradouro} pertence ao cliente ${endereco.idCliente}`);
+        }
+        else {
+            this._enderecos.push(endereco);
+        }
     }
     autenticar() {
         return true;

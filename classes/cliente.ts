@@ -18,7 +18,14 @@ export class Cliente extends Pessoa implements IUsuario {
 
   //métodos
   public adicionarEndereco(endereco: Endereco) {
-    this._enderecos.push(endereco);
+    if (endereco.idCliente != this._idCliente) {
+      console.error(`Você não pode associar esse endereço a ${this.nome}.`);
+      console.error(
+        `O endereço ${endereco.logradouro} pertence ao cliente ${endereco.idCliente}`
+      );
+    } else {
+      this._enderecos.push(endereco);
+    }
   }
 
   public autenticar(): boolean {
@@ -27,9 +34,13 @@ export class Cliente extends Pessoa implements IUsuario {
 
   public adicionarConta(conta: Conta) {
     if (conta.idCliente != this._idCliente) {
-      console.error(`Você não pode associar o cliente ${this.nome} a essa conta.`);
-      console.error(`A conta ${conta.nConta} pertence ao cliente ${conta.idCliente}`);
-    } else{
+      console.error(
+        `Você não pode associar o cliente ${this.nome} a essa conta.`
+      );
+      console.error(
+        `A conta ${conta.nConta} pertence ao cliente ${conta.idCliente}`
+      );
+    } else {
       this._contas.push(conta);
     }
   }
