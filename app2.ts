@@ -2,7 +2,7 @@ import { Cliente } from "./classes/cliente";
 import { Endereco } from "./classes/endereco";
 
 //Loop gerado endereço recebe cliente e cliente recebe endereço
-//Possível solução: associar endereço ao idCliente
+//Possível solução: passar o idCliente como parâmetro na instância do endereço para associação
 
 //Crie um cliente e adicione 3 endereços a ele
 const cliente1 = new Cliente("99999999999", "Danilo", "8888-8888", true);
